@@ -1,0 +1,21 @@
+mutation {
+  createOrganization(name: "Loreal") {
+    _id
+    name
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  updateOrganization(name:"Loreal Edited", organization:"5aafc7848f3809456497f6b7") {
+    _id
+    name
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  deleteOrganization(organization:"5aafc7848f3809456497f6b7")
+}

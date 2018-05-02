@@ -1,0 +1,14 @@
+Super admin -> create company and admin account
+admin -> create corporate planner accounts
+corporate planner -> add site and site planner account, add activities, add accounts for other stakeholders
+site planner -> add activities, update activities
+
+Reporting dashboards visible to all
+
+
+server 
+
+types
+models
+api.
+resolvers

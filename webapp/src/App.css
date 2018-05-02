@@ -1,0 +1,62 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.Auth-background {
+  background-image: url(assets/login-bg.jpeg);
+  overflow: auto;
+  background-size: cover;
+}
+
+.TopNav {
+  height: 64px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TopNav-logout-wrap {
+  background: #e1e1e1;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.TopNav-logout-wrap .TopNav-logout-wrap-displayName {
+  color: #000;
+}
+
+.TopNav-logout-wrap .TopNav-logout-wrap-separator {
+  border-right: 1px solid #777777;
+  padding-left: 8px;
+  margin-right: 8px;
+}
+
+.TopNav-logout-wrap button {
+  color: #000;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.TopNav-logout-wrap button:hover {
+  text-decoration: underline;
+}
+
+.TopNav-left {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.TopNav-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
