@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import TopNav from './nav';
 import Loader from './common/Loader';
 import { USER_QUERY } from '../graphql/user.query';
-import SuperAdmin from './super-admin';
+import Admin from './admin';
 
 const Main = () => (
   <div>
@@ -13,8 +13,8 @@ const Main = () => (
         if (loading) return <Loader />;
         if (error) return <div>{error.message}</div>;
 
-        if (user.superAdmin) {
-          return <SuperAdmin user={user} />;
+        if (user.isAdmin) {
+          return <Admin user={user} />;
         }
 
         return null;

@@ -1,51 +1,62 @@
-const { User, Role, Company } = require('./models');
+const { User, Role } = require('./models');
 const admin = require('firebase-admin');
 
 module.exports = () =>
   new Promise(async (resolve, reject) => {
     try {
-      await admin.auth().getUserByEmail(process.env.SUPER_ADMIN_USER);
-      resolve();
+      const user = await admin.auth().getUserByEmail(process.env.SUPER_ADMIN_USER);
+      resolve(user);
     } catch (error) {
       try {
         /* create super user */
+
         const userRecord = await admin.auth().createUser({
           email: process.env.SUPER_ADMIN_USER,
           emailVerified: true,
           password: 'Tobopee7',
-          displayName: 'EHS Super Admin',
+          displayName: 'Merida Super Admin',
         });
 
         await User.remove({});
-        await Company.remove({});
+        await Role.remove({});
 
         const newUser = await new User({
           email: userRecord.email,
           displayName: userRecord.displayName,
           uid: userRecord.uid,
-          superAdmin: true,
+          isAdmin: true,
         }).save();
 
         /* create preconfigured roles */
-        await Role.remove({});
+
+        const adminRole = new Role({
+          name: 'Admin',
+        });
+
+        adminRole.users = [newUser._id];
+        await adminRole.save();
 
         await new Role({
-          name: 'Site Planner',
+          name: 'Team Leader',
         }).save();
 
         await new Role({
-          name: 'Corporate Planner',
+          name: 'Team Member',
         }).save();
 
-        const newCompany = await new Company({
-          name: 'EHS Planner',
-          users: [newUser._id],
+        await new Role({
+          name: 'Mentor',
         }).save();
 
-        newUser.company = newCompany._id;
-        await newUser.save();
+        await new Role({
+          name: 'Facilitator',
+        }).save();
 
-        resolve();
+        await new Role({
+          name: 'Sponsor',
+        }).save();
+
+        resolve(newUser);
       } catch (err) {
         reject(err);
       }

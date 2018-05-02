@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const { graphiqlExpress, graphqlExpress } = require('apollo-server-express');
@@ -10,24 +9,28 @@ const favicon = require('serve-favicon');
 const cors = require('cors');
 const createError = require('http-errors');
 const admin = require('firebase-admin');
+const morgan = require('morgan');
 
+const winston = require('./config/winston');
 const seedData = require('./seed-data');
 const { isLoggedInGraphQL } = require('./utils');
-const serviceAccount = require('./firebase-config');
+const serviceAccount = require('./firebase-config.json');
+
+winston.level = process.env.LOG_LEVEL;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://ehs-planner-240d4.firebaseio.com',
+  databaseURL: 'https://cmca-india.firebaseio.com',
 });
 
 // database connection
 mongoose.connect(process.env.MONGO_URL);
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+db.on('error', () => winston.log('error', 'Database connection error'));
 db.once('open', async () => {
-  console.log('DB CONNECTED ...');
+  winston.log('info', 'Database connected');
   const user = seedData();
-  if (user) console.log('SEEDING SUCCESSFUL!');
+  if (user) winston.log('info', 'SEEDING SUCCESSFUL');
 });
 
 const PORT = 8000;
@@ -41,6 +44,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // middleware
+app.use(morgan('combined', { stream: winston.stream }));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -73,7 +77,7 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-  next(createError(404));
+  next(createError(404, 'Requested resource does not exist'));
 });
 
 // error handler
@@ -84,4 +88,4 @@ app.use((err, req, res) => {
 });
 
 app.listen(PORT);
-console.log(`EXPRESS RUNNING ON PORT: ${PORT}`);
+winston.log('info', `EXPRESS RUNNING ON PORT: ${PORT}`);

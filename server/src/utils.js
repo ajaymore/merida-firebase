@@ -22,6 +22,7 @@ exports.isLoggedIn = async (req, res, next) => {
     res.status(400).send({ error });
   }
 };
+
 exports.isLoggedInGraphQL = async (req, res, next) => {
   try {
     const token = exports.checkToken(req);

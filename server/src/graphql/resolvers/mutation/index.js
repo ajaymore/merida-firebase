@@ -2,20 +2,15 @@ const { requiresAuth } = require('../permissions');
 const admin = require('firebase-admin');
 
 module.exports = {
-  createCompany: requiresAuth.createResolver(async (parent, args, { User, Company }) => {
-    const { companyName, companyAdminInput } = args;
-    const newCompany = await new Company({ name: companyName }).save();
+  createUser: requiresAuth.createResolver(async (parent, args, { User }) => {
+    const { userInput } = args;
 
     const userRecord = await admin.auth().createUser({
       emailVerified: true,
-      ...companyAdminInput,
+      ...userInput,
     });
 
-    const newUser = new User({ ...companyAdminInput, companyAdmin: true, uid: userRecord.uid });
-    newUser.company = newCompany._id;
-    await newUser.save();
-
-    newCompany.users = [newUser._id];
-    return newCompany.save();
+    const newUser = new User({ ...userInput, uid: userRecord.uid });
+    return newUser.save();
   }),
 };

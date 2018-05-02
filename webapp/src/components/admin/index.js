@@ -18,7 +18,7 @@ import {
 import { TextField } from 'office-ui-fabric-react/lib/TextField';
 import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
 import Yup from 'yup';
-import { CREATE_COMPANY_MUTATION } from '../../graphql/super-admin.queries';
+import { CREATE_USER_MUTATION } from '../../graphql/admin.queries';
 
 // const list = [
 //   {
@@ -38,19 +38,17 @@ import { CREATE_COMPANY_MUTATION } from '../../graphql/super-admin.queries';
 // ];
 // console.log(list);
 
-const SuperAdmin = ({ createCompany }) => (
+const Admin = ({ createUser }) => (
   <div style={{ paddingLeft: 20, paddingRight: 20 }}>
     <h2 className="ms-fontWeight-semilight">Companies</h2>
     <Formik
       initialValues={{
-        companyName: '',
         displayName: '',
         email: '',
         password: ''
       }}
       validationSchema={() =>
         Yup.object().shape({
-          companyName: Yup.string().required(),
           displayName: Yup.string().required(),
           email: Yup.string()
             .required()
@@ -65,32 +63,28 @@ const SuperAdmin = ({ createCompany }) => (
         { setSubmitting, setErrors, setStatus, setValues, setTouched }
       ) => {
         try {
-          createCompany({
+          createUser({
             variables: {
-              companyName: values.companyName,
-              companyAdminInput: {
+              userInput: {
                 displayName: values.displayName,
                 email: values.email,
                 password: values.password
               }
             }
           });
-          setStatus('Company created successfully');
+          setStatus('User created successfully');
           setSubmitting(false);
           setValues({
-            companyName: '',
             displayName: '',
             password: '',
             email: ''
           });
           setTouched({
-            companyName: false,
             displayName: false,
             password: false,
             email: false
           });
         } catch (err) {
-          console.log(err);
           setSubmitting(false);
           setErrors({ service: err.message });
         }
@@ -107,7 +101,7 @@ const SuperAdmin = ({ createCompany }) => (
         setStatus
       }) => (
         <form onSubmit={handleSubmit}>
-          <h2>New Company</h2>
+          <h2>New User</h2>
           {status && (
             <MessageBar
               messageBarType={MessageBarType.success}
@@ -133,21 +127,14 @@ const SuperAdmin = ({ createCompany }) => (
             </MessageBar>
           )}
           <TextField
-            label="Company Name"
-            required
-            errorMessage={touched.companyName && errors.companyName}
-            onChanged={companyName => setFieldValue('companyName', companyName)}
-            value={values.companyName}
-          />
-          <TextField
-            label="Admin name"
+            label="User name"
             required
             errorMessage={touched.displayName && errors.displayName}
             onChanged={displayName => setFieldValue('displayName', displayName)}
             value={values.displayName}
           />
           <TextField
-            label="Admin Email"
+            label="User Email"
             required
             errorMessage={touched.email && errors.email}
             onChanged={email => setFieldValue('email', email)}
@@ -166,7 +153,7 @@ const SuperAdmin = ({ createCompany }) => (
           <DefaultButton
             primary
             disabled={isSubmitting}
-            text="Add company"
+            text="Add user"
             type="submit"
           />
         </form>
@@ -175,10 +162,8 @@ const SuperAdmin = ({ createCompany }) => (
   </div>
 );
 
-SuperAdmin.propTypes = {
-  createCompany: PropTypes.func.isRequired
+Admin.propTypes = {
+  createUser: PropTypes.func.isRequired
 };
 
-export default graphql(CREATE_COMPANY_MUTATION, { name: 'createCompany' })(
-  SuperAdmin
-);
+export default graphql(CREATE_USER_MUTATION, { name: 'createUser' })(Admin);

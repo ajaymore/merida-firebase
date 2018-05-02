@@ -1,30 +1,24 @@
-const {
-  UserType, CompanyType, RoleType, SiteType,
-} = require('../models');
+const { UserType, RoleType } = require('../models');
 
 const api = `
   scalar Date
 
-  input CompanyAdminInput {
+  input UserInput {
     displayName: String!
     email: String!
     password: String!
   }
 
-  input UserUpdateInput {
-    name: String
-  }
-
   type Query {
     user: User!
-    companiesSuperAdmin(forSuperAdmin: Boolean!): [Company]!
+    roles: [Role!]!
   }
 
   type Mutation {
-    createCompany(companyName: String!, companyAdminInput: CompanyAdminInput!): Company!
+    createUser(userInput: UserInput!): User!
   }
 `;
 
-const types = [UserType, CompanyType, RoleType, SiteType];
+const types = [UserType, RoleType];
 
 module.exports = [...types, api];

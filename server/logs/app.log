@@ -1,0 +1,84 @@
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:12:19.088Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:12:19.111Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:12:19.114Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:13:54.067Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:13:54.089Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:13:54.091Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:24:59.975Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:25:00.001Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:25:00.004Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:25:58.861Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:25:58.880Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:25:58.882Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:38:20 +0000] \"GET /auth/protected-route HTTP/1.1\" 400 397 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:38:20.006Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:39:00 +0000] \"GET /auth/protected-routes HTTP/1.1\" 404 2351 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:39:00.521Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:40:43 +0000] \"POST /auth/protected-routes HTTP/1.1\" 404 2351 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:40:43.858Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:41:45.063Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:41:45.084Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:41:45.087Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:41:49 +0000] \"POST /auth/protected-routes HTTP/1.1\" 404 2375 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:41:49.993Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:42:53 +0000] \"GET / HTTP/1.1\" 500 2857 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:42:53.656Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:43:19.437Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:43:19.464Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:43:19.466Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:43:21 +0000] \"GET / HTTP/1.1\" 200 275 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:43:21.339Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:43:21 +0000] \"GET /stylesheets/style.css HTTP/1.1\" 404 2387 \"http://localhost:8000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:43:21.353Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:43:21 +0000] \"GET /favicon.ico HTTP/1.1\" 200 24838 \"http://localhost:8000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:43:21.374Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:44:25.101Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:44:25.124Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:44:25.126Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:45:08.964Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:45:08.983Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:45:08.986Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:45:15 +0000] \"GET /graphiql HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:45:15.214Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:45:15 +0000] \"POST /graphql? HTTP/1.1\" 200 20104 \"http://localhost:8000/graphiql\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:45:15.823Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:45:19 +0000] \"POST /graphql? HTTP/1.1\" 200 281 \"http://localhost:8000/graphiql?query=%7B%0A%20%20roles%0A%7D\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:45:19.971Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:45:51 +0000] \"POST /graphql? HTTP/1.1\" 200 281 \"http://localhost:8000/graphiql?query=query%20GetRoles%20%7B%0A%20%20roles%20%7B%0A%20%20%20%20_id%0A%20%20%20%20name%0A%20%20%20%20createdAt%0A%20%20%20%20updatedAt%0A%20%20%7D%0A%7D&operationName=GetRoles\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:45:51.818Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:45:54 +0000] \"POST /graphql? HTTP/1.1\" 200 281 \"http://localhost:8000/graphiql?query=query%20GetRoles%20%7B%0A%20%20roles%20%7B%0A%20%20%20%20_id%0A%20%20%20%20name%0A%20%20%20%20createdAt%0A%20%20%20%20updatedAt%0A%20%20%7D%0A%7D&operationName=GetRoles\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:45:54.647Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:46:08.588Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:46:08.612Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:46:08.615Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:47:47 +0000] \"POST /graphql? HTTP/1.1\" 400 - \"http://localhost:8000/graphiql?query=mutation%20CreateUser(%24userInput%3AUserInput!)%20%7B%0A%20%20createUser(userInput%3A%24userInput)%0A%7D%0A&operationName=CreateUser\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:47:47.620Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:48:35 +0000] \"POST /graphql? HTTP/1.1\" 200 114 \"http://localhost:8000/graphiql?query=mutation%20CreateUser(%24userInput%3AUserInput!)%20%7B%0A%20%20createUser(userInput%3A%24userInput)%20%7B%0A%20%20%20%20_id%0A%20%20%20%20displayName%0A%20%20%20%20uid%0A%20%20%20%20email%0A%20%20%20%20createdAt%0A%20%20%20%20updatedAt%0A%20%20%7D%0A%7D%0A&operationName=CreateUser&variables=%7B%22userInput%22%3A%20%7B%22displayName%22%3A%20%22AJay%20M%22%2C%22email%22%3A%20%22ajay%40gm.co%22%2C%20%22password%22%3A%20%22Infosys%40123%22%7D%7D\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:48:35.648Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:48:49.892Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:48:49.915Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:48:49.918Z"}
+{"level":"info","message":"::1 - - [02/May/2018:08:48:53 +0000] \"POST /graphql? HTTP/1.1\" 200 217 \"http://localhost:8000/graphiql?query=mutation%20CreateUser(%24userInput%3AUserInput!)%20%7B%0A%20%20createUser(userInput%3A%24userInput)%20%7B%0A%20%20%20%20_id%0A%20%20%20%20displayName%0A%20%20%20%20uid%0A%20%20%20%20email%0A%20%20%20%20createdAt%0A%20%20%20%20updatedAt%0A%20%20%7D%0A%7D%0A&operationName=CreateUser&variables=%7B%22userInput%22%3A%20%7B%22displayName%22%3A%20%22AJay%20M%22%2C%22email%22%3A%20%22ajay%40gm.co%22%2C%20%22password%22%3A%20%22Infosys%40123%22%7D%7D\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:48:53.042Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:08:53:52 +0000] \"POST /graphql HTTP/1.1\" 400 - \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:53:52.307Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:08:55:03 +0000] \"POST /graphql HTTP/1.1\" 200 82 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:55:03.809Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:57:08.622Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:57:08.659Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:57:08.662Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:57:40.218Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:57:40.240Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:57:40.243Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:57:54.835Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:57:54.858Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:57:54.860Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:58:01.697Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:58:01.721Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:58:01.723Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T08:58:43.120Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T08:58:43.144Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T08:58:43.147Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:08:59:23 +0000] \"POST /graphql HTTP/1.1\" 200 85 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T08:59:23.678Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:09:00:15 +0000] \"POST /graphql HTTP/1.1\" 200 103 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T09:00:15.427Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:09:01:05 +0000] \"POST /graphql HTTP/1.1\" 200 103 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T09:01:05.432Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:09:01:38 +0000] \"POST /graphql HTTP/1.1\" 200 103 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T09:01:38.860Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:09:01:58 +0000] \"POST /graphql HTTP/1.1\" 200 249 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T09:01:58.305Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [02/May/2018:09:02:15 +0000] \"POST /graphql HTTP/1.1\" 200 103 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36\"\n","timestamp":"2018-05-02T09:02:15.436Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T11:08:22.151Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T11:08:22.178Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T11:08:22.180Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T11:08:23.160Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T11:08:23.182Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T11:08:23.185Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T11:09:10.687Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T11:09:10.710Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T11:09:10.712Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T11:11:07.306Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T11:11:07.329Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T11:11:07.331Z"}
+{"level":"info","message":"EXPRESS RUNNING ON PORT: 8000","timestamp":"2018-05-02T11:11:22.896Z"}
+{"level":"info","message":"Database connected","timestamp":"2018-05-02T11:11:22.920Z"}
+{"level":"info","message":"SEEDING SUCCESSFUL","timestamp":"2018-05-02T11:11:22.922Z"}

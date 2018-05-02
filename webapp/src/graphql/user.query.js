@@ -10,14 +10,18 @@ export const USER_QUERY = gql`
         createdAt
         updatedAt
       }
-      superAdmin
-      companyAdmin
-      company {
-        _id
-        name
-        createdAt
-        updatedAt
-      }
+      isAdmin
+    }
+  }
+`;
+
+export const GET_ROLES_QUERY = gql`
+  query GetRoles {
+    roles {
+      _id
+      name
+      createdAt
+      updatedAt
     }
   }
 `;
